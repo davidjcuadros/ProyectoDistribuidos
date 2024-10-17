@@ -7,7 +7,7 @@ class ServicioAsignacionTaxi:
         self.taxi_positions = {}
 
     def connect(self):
-        self.client.connect("localhost", 1883)
+        self.client.connect("10.43.100.135", 1883)
         print("Servicio de Asignación conectado al broker.")
         self.client.subscribe("/solicitud")
         self.client.subscribe("/posicion/taxi")

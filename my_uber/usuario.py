@@ -8,7 +8,7 @@ class Usuario:
         self.client = mqtt.Client()
 
     def connect(self):
-        self.client.connect("localhost", 1883)
+        self.client.connect("10.43.100.135", 1883)
         print(f"Usuario {self.user_id} conectado al broker.")
         # El usuario se suscribe a su tema de asignación para recibir el ID del taxi asignado
         self.client.subscribe(f"/asignacion/usuario_{self.user_id}")
